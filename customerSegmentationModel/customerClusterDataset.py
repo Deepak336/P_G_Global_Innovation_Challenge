@@ -1,4 +1,5 @@
 import math
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import style
@@ -18,14 +19,14 @@ for i in range(0,14):
 
 #print(nX)
 
-kmeans = KMeans(n_clusters=2)
+kmeans = KMeans(n_clusters=3)
 kmeans.fit(nX)
 
 centroids = kmeans.cluster_centers_
 labels = kmeans.labels_
 
-print(centroids)
-print(labels)
+print("centroids : ",centroids)
+print("labels : ",labels)
 
 colors = ["g.","r.","c.","y.","g.","r.","c.","y.","g.","r.","c.","y.""g.","r."]
 
@@ -33,6 +34,16 @@ for i in range(len(nX)):
     print("coordinate:",nX[i], "label:", labels[i])
     plt.plot(nX[i][0], nX[i][1], colors[labels[i]], markersize = 10)
 
+# squared distance to cluster center
+X_dist = kmeans.transform(nX)
+
+print("X_dist ",X_dist)
+# do something useful...
+
+#df = pd.DataFrame(X_dist.sum(axis=1).round(2), columns=['sqdist'])
+#df['label'] = y
+
+#df.head()
 
 plt.scatter(centroids[:, 0],centroids[:, 1], marker = "x", s=150, linewidths = 5, zorder = 10)
 
