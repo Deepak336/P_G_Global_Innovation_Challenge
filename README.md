@@ -7,7 +7,7 @@ Project has two parts
 2. Customer Cashback model a neural network, with multi input and multi output model using keras and tf as backend.
    It uses functional API in keras to model the neural network.
 
-Apart from that repository contains the code for dataset generators for respective clustering and neural netowrk training,
+Apart from that repository contains the code for dataset generators for respective clustering and neural network training,
 evaluation and prediction.
 
 
