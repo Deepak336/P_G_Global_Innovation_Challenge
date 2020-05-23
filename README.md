@@ -16,4 +16,4 @@ Code has been tested to run on Ubuntu 16.04
 
 1.Keras with tf as backend installed via miniconda.
 
-2.Packages like numpy,scipy,matplolib installed.
+2.Packages like numpy,scipy,matplotlib installed.
